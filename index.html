@@ -1,0 +1,377 @@
+<html lang="en">
+<!doctype html>
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>The Hitchhiker's Guide to Orion Solutions</title>
+
+		<meta name="description" content="The Orion Project">
+		<meta name="author" content="Ken Walker">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/orion.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h3>The Hitchhiker's Guide to Orion Solutions</h3>
+					<h4>The Open Source Orion Project</h4>
+					<h4>JAXConf US - Jun, 2013</h4>
+					<br>
+					<a class="image"><img src="images/eclipseconlogo.png" ></a>
+					<br>
+					<p>
+						<a href="http://szbra.github.io/">szbra.github.io</a> / <a href="http://twitter.com/szymonbrandys">@szymonbrandys</a> / <a href="http://twitter.com/orionhub">@orionhub</a>
+						<br>
+						<h4>Orion Project</h4>
+						<br><i><a href="https://orionhub.org/git/git-repository.html#,createProject.name=JAXConfUS2013,cloneGit=git://github.com/kenwalker/JAXConfUS2013.git">Start editing this talk at OrionHub.org</a></i>					
+					</p>					
+				</section>
+
+				<section>
+					<h3>The Beginning</h3>
+					<p>Inside IBM Orion was started by some of the Eclipse Team members from SWT & the Platform team</p>
+					<p>The goal was to begin working on a platform to support the growing initiatives for Cloud</p>
+					<p>As IBM is a founder of Eclipse, we wanted to leverage our experiences, investment, and the governance model</p>
+					<p>IBM made the initial contribution of Orion components in January, 2011</p>
+					<blockquote>Somewhere in the cosmos, he said, along with all the planets</blockquote>
+				</section>
+
+				<section>
+					<h3>Why Orion?</h3>
+					<p>Fundamental change from other Eclipse projects</p>
+					<p>Shift to Web based application development/delivery</p>
+					<p>Replace complex IDE pages with Web workflows</p>
+					<p>Provide the pieces as a whole or consumable by Web teams in product (IBM and others)</p>
+					<p>Orion is an onramp for IBM teams & Community</p>
+				</section>
+
+				<section>					
+					<h3>O</h3>
+					<p>Edit, Test, Deploy, Share</p>
+				</section>
+
+				<section>
+					<h3>How are these pages constructed?</h3>
+					<p>Orion has many page templates by default</p>
+					<p>Provide initial functionality for developers</p>
+					<p>Product teams can start with existing pages</p>
+					<p>Orion provides extensibility points to plugins</p>
+					<p><i>Extensibility is what sets Orion apart!!</i></p>
+				</section>
+				
+				<section>
+					<h3>Orion on Mobile</h3>
+					<p>Tablets such as the iPad, iPad mini and Google based platforms are also supported by Orion</p>
+					<p>Not specifically written <i>responsive</i> but we're working on it</i></p>
+					<p>
+						<a href="images/OrionOnMobile.png"><img width="824" height="347" src="images/OrionOnMobile.png" alt="Orion on Mobile"></img></a>
+					</p>
+				</section>
+
+				<section>
+					<h3>Extensible in the browser?</h3>
+					<p><i>"plugins"</i> live right in the page</p>
+					<p>Agnostic to where the plugin or code came from</p>
+					<p>No lock-in to plugin providers</p>
+					<img src="images/PlugInDiagram.png" alt="Down arrow"></img>
+				</section>
+				
+				<section>
+				<h3>How are plugins implemented</h3>
+				<p>JavaScript implementation of OSGi Services API</p>
+				<p>Uses Promises for return types and follows the Lifecycle and Bundle State semantics used for Plugins</p>
+				<p>Implementation of Configuration Admin and Metatype for Plugin Settings and Schema</p>
+				<blockquote>
+					OSGI seems like overengineered Java stuff. Usually they're a big pain.
+				</blockquote>
+				<p><i>-Isaac Schlueter</i></p>
+				</section>
+
+				<section>
+					<h3>Example JSBeautify Plugin</h3>
+					<p>You provide html, javascript elements, from your site</p>
+					<p>In this case served up from a GitHub account</p>
+					<img src="images/JSBeautifyDiagram.png" alt="JSBeautifyPlugin"></img>
+				</section>
+
+				<section>
+					<h2>Chapter 3</h2>
+					<h3>Orion Editor</h3>
+				</section>
+
+				<section>
+					<h3>Mozilla thru Firefox integration</h3>
+					<p>Embedded in the debugger and scratchpad</p>
+					<a href="images/FirefoxOrion.png"><img width="800" height="500" src="images/FirefoxOrion.png" alt="IBM JazzHub Cloud"></img></a>
+				</section>
+
+				<section>
+					<h3>Embed Orion in web sites</h3>
+					<p>Esprima examples from <a href="http://ariya.ofilabs.com/">Ariya Hidayat</a></p>
+					<a href="images/EsprimaRefactoringExample.png"><img width="800" height="500" src="images/EsprimaRefactoringExample.png" alt="IBM RD Traveler"></img></a>
+				</section>
+
+				<section>
+				  <h3>Embedding in presentations!</h3>
+				  <p>Slightly meta here...</p>
+				  <pre class="editor" data-editor-lang="js" data-editor-theme="css/nimbus.css" style="height:400px">
+
+&lt;section&gt;
+  &lt;h3&gt;Embedding in presentations!&lt;/h3&gt;
+  &lt;h4&gt;Slightly meta here...&lt;/h4&gt;
+  &lt;pre class="editor" data-editor-lang="js" data-editor-theme="css/nimbus.css" style="height:400px"&gt;
+
+/*global require window console */
+var express = require("express");
+var app = express();
+
+app.get('/', function(req, res) {
+    res.send('Hello from Node');
+});
+
+app.listen(3000);
+  &lt;/pre&gt;
+&lt;/section&gt;
+				  </pre>
+				</section>
+				
+				<section>
+					<h3>Available components and shims from Orion</h3>
+					<p>Promises/A+ cancellation and progress, W3C URL, W3C Web Components, HTML Templates and Custom Elements, JavaScript APIs for OSGi</p>
+					<p>
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/Deferred.js">Orion Deferred</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/HTMLTemplates-shim.js">Orion HTML Templates Shim</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/URITemplate.js">Orion URI Templates</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/URL-shim.js">Orion URL Shim</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/pluginregistry.js">Orion Plugin Registry</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/serviceregistry.js">Orion Service Registry</a>, 
+					<a href="https://github.com/eclipse/orion.client/blob/master/bundles/org.eclipse.orion.client.core/web/orion/xhr.js">Orion XHR Implementation</a>, 
+					<a href="https://github.com/mamacdon/deferred-fs">Orion Node Deferred File System</a>
+					<a href="http://download.eclipse.org/orion/">Stand-alone Editor (follow stable links)</a>
+					</p>
+					<p>All under the EPL and EDL</p>
+				</section>
+				
+				<section>
+					<h2>Chapter 4</h2>
+					<h3>Orion Filesystems</h3>
+				</section>
+				
+				<section>
+					WebDAV
+					GDrive
+					etc.
+				</section>
+				
+				<section>
+					<h2>Chapter 5</h2>
+					<h3>Development Environments</h3>
+				</section>
+
+				<section>
+					<h3>Hewlett Packard</h3>
+					<p><i>HP DevAnywhere, the entire software development lifecycle in the cloud</i></p>
+					<p>Node.js Orion server including editor, plugins, extensions</p>
+					<a href="images/CodeAnywhere2.png"><img width="700" height="450" src="images/CodeAnywhere2.png" alt="HP CodeAnywhere"></img></a>
+				</section>
+
+				<section>
+					<h3>VMWare/Pivotal Scripted Editor</h3>
+					<p>Desktop editor only (<i>like Adobe Brackets</i>)</p>
+					<p><i>scr</i> [filename] - improved content assist through introspection supporting AMD loading</p>
+					<a href="images/Scripted.png"><img width="800" height="500" src="images/Scripted.png" alt="VMWare/Pivotal Scripted Editor"></img></a>
+				</section>
+
+				<section>
+					<section>
+						<h3>IBM JazzHub & BlueMix</h3>
+						<p>Cloud ALM solution supporting hosted SCM and Deployment</p>
+						<a href="images/JazzHubCoding.png"><img width="800" height="500" src="images/JazzHubCoding.png" alt="IBM JazzHub Cloud"></img></a>
+					</section>
+					<section>
+						<h3>IBM JazzHub - Work items</h3>
+						<p>IBM Cloud ALM solution supporting Jazz SCM and GitHub</p>
+						<a href="images/JazzHubAssociateWorkItem.png"><img width="800" height="500" src="images/JazzHubAssociateWorkItem.png" alt="IBM JazzHub Cloud"></img></a>						
+					</section>
+				</section>
+
+				<section>
+					<h3>IBM RD Traveler</h3>
+					<p>z/OS Cloud based cobol development anywhere</p>
+					<a href="images/RDTraveler.png"><img width="800" height="500" src="images/RDTraveler.png" alt="IBM RD Traveler"></img></a>
+				</section>
+
+				<section>
+					<h3>Cloudfier.com</h3>
+					<p>Business centric solution for Cloud apps</p>
+					<a href="images/Cloudfier.png"><img width="800" height="500" src="images/Cloudfier.png" alt="IBM RD Traveler"></img></a>
+				</section>
+				
+				<section>
+					<h3>Maqetta</h3>
+				</section>
+				
+				<section>
+					<h3>Flower</h3>
+				</section>
+
+				<section>
+					<h2>Chapter 6</h2>
+					<h3>Server Side</h3>
+				</section>
+
+				<section>
+				<h3>Orion Java Server</h3>
+				<p>Orion is available as a stand-alone Java based server or WAR file that takes 2 minutes
+				to setup a multi-user cloud based development platform</p>
+				<p>Those wishing to extent the Java server directly can write Eclipse plugins to surface RESTful APIs to the client</p>
+				<a href="images/JavaOrionRestAPIs.png"><img width="400" height="286" src="images/JavaOrionRestAPIs.png" alt="Orion REST APIs"></img></a>
+				</section>
+				
+				<section>
+				<h3>Orion Node.js Server</h3>	
+				<p>Also available as a <a href="http://wiki.eclipse.org/Orion/Node/Getting_started">Node.js</a> based application, with less functionality, 
+				but full editor, search capabilities, node start/stop/debug and npm commands</p>
+				<p>Very portable and great performance</p>
+				<p>Deploy anywhere Node is installed</p>
+				<code>>npm install orion</code><br>
+				<code>>npm start orion</code>
+				<p>
+					<img width="337" height="241" src="images/raspberrypiorion.png" alt="Orion on Raspberry Pi"></img></a>
+				</p>
+				</section>
+
+				<section>
+				<h3>Need another server platform? Write one</h3>
+				<p>Chris McGee working on a Go Development platform</p>
+				<p>Wrote the file system and search API in Go</p>
+				<p>Added extension plugins for build and format</p>
+				<p>
+				<a href="images/Orion-Go.png"><img width="600" height="414" src="images/Orion-Go.png" alt="JavaRestfulAPIs"/></a>
+				</p>
+				</section>
+				
+				<section>
+					<h2>Chapter 6</h2>
+					<h3>Orion-based tools</h3>
+				</section>
+				
+				<section>
+					<h3>A globally accessible web tool</h3>
+					<p>i18N built in the core, the UI and in the plug-ins</p>
+					<p>Text editor capable of both Double Byte and working on Bidi</p>
+					<p>Working to be fully accessible</p>
+					<p>Orion provides a plugin for Externalizing strings to bundles</p>
+					<p>
+						<a href="images/Orioni18N.png"><img width="800" height="323" src="images/Orioni18N.png" alt="IBM RD Traveler"></img></a>
+					</p>
+				</section>
+
+				<section>
+					<h3>Marketplace</h3>
+				</section>
+				
+				<section>
+					â€œThe Answer to the Great Question... Of Life, the Universe and Everything... Is... Forty-two,' said Deep Thought, with infinite majesty and calm.â€� 
+				</sections>
+
+				<section>
+					<h2>Find out more</h2>
+					<p>Read our blog at <a href="http://planetorion.org">Planet Orion</a></p>
+					<p>Check out the <a href="http://wiki.eclipse.org/Orion/Buzz">Orion BUZZ</a></p>
+					<p>Lots of information in the <a href="http://wiki.eclipse.org/Orion">Orion Wiki</a></p>
+					<p>Subscribe and contribute to the <a href="https://dev.eclipse.org/mailman/listinfo/orion-dev">Orion Dev List</a>
+					<p><a href="http://szbra.github.io/">szbra.github.io</a> / <a href="http://twitter.com/szymonbrandys">@szymonbrandys</a> / <a href="http://twitter.com/orionhub">@orionhub</a></p>
+				</section>
+
+				<section>
+					So long, and thanks for all the javascript
+				</section>
+
+		</div>
+		<div class="topBanner">
+			<img src="images/orionsmall.png" height="50" width="50" style="float:left">
+			<img src="images/codeeverywhere.png" style="float:right">
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			
+			// Put the following config option to advance slides every 15 seconds
+//				autoSlide: 15000,
+			Reveal.initialize({
+				width: 1200,
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				progress: true,
+
+				theme: 'orion', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					
+					{ src: 'js/built-editor-fix.js', async: true, callback: function()
+							{
+							    require(["orion/editor/edit"], function(edit) {
+							        var editors = edit({
+							            className: "editor"
+							        });
+							        function updateEditor() {							
+							            for (var i = 0; i < editors.length; i++) {
+							                editors[i].getTextView().update(true);
+							            }
+							        }
+							        document.addEventListener("transitionend", updateEditor);
+							        document.addEventListener("webkitTransitionEnd", updateEditor);
+							    });
+							}
+					}					
+					
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
